@@ -1,4 +1,3 @@
-import azure.functions as func
 import logging
 import os
 from microsoft_graph import GraphClient
@@ -8,6 +7,8 @@ import pandas as pd
 import numpy as np
 import io
 from datetime import datetime
+
+classifier = None
 
 def init():
     global classifier
@@ -64,7 +65,7 @@ def generate_file_name(original_name):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     return f"{base_name}_analyzed_{timestamp}"
 
-def main(myblob: func.InputStream):
+def process_excel_file(myblob):
     logging.info(f"Python blob trigger function processed blob \n"
                  f"Name: {myblob.name}\n"
                  f"Blob Size: {myblob.length} bytes")
@@ -101,5 +102,5 @@ def main(myblob: func.InputStream):
     logging.info(f"File processed and moved to: {new_path}")
     logging.info(f"File summary: {file_content}")
 
-# Initialize models when the Function starts
+# Initialize models when the module is imported
 init()

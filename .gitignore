@@ -1,0 +1,20 @@
+# Python files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Azure Functions artifacts
+bin
+obj
+appsettings.json
+local.settings.json
+
+# Visual Studio Code
+.vscode/
+
+# Other
+*.log
