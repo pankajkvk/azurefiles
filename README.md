@@ -1,3 +1,4 @@
+Description of files included in the repo:
 
 • excel_processor.py:
   - Core logic for processing Excel files
@@ -45,11 +46,10 @@ Project structure:
 
 Key technical aspects:
 - Leverages Azure Blob storage trigger for file processing
-- Employs pandas for robust data analysis
+- Employs pandas for data analysis
 - Utilizes Hugging Face Transformers for NLP-based file classification
 - Integrates with Microsoft Graph API for OneDrive file management
 - Designed for scalability and handling diverse Excel file structures
 - Implements logging for monitoring and debugging
 - Uses environment variables for secure credential management
 
-This structure follows Azure Functions best practices, separating configuration from code and providing a modular approach to file processing and classification.
