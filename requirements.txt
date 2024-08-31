@@ -1,0 +1,6 @@
+azure-functions
+pandas
+openpyxl
+transformers
+numpy
+microsoft-graph-core
